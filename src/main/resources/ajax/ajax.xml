@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.feinno.nss.framework.controller.action.ajax" namespace="/ajax"  extends="json-default">
+        <action name="ajaxLogon"
+            class="com.feinno.nss.framework.controller.action.frame.ajaxLogonAction">
+            <result name="success" type="json"></result>
+        </action>
+        
+        <action name="ajaxLogout"
+            class="com.feinno.nss.framework.controller.action.frame.ajaxLogonAction" method="Logout">
+            <result name="success" type="json"></result>
+        </action>
+        
+        <action name="ajaxCheckUserName"
+            class="com.feinno.nss.framework.controller.action.frame.ajaxRegisterAction" method="UserNameHaveUsed">
+            <result name="success" type="json"></result>
+        </action>
+        
+        <action name="ajaxRegister"
+            class="com.feinno.nss.framework.controller.action.frame.ajaxRegisterAction">
+            <result name="success" type="json"></result>
+        </action>
+        
+        <action name="resourceDelete" class="com.feinno.nss.framework.controller.action.file.AjaxDeleteAction">
+			<result type="json"></result>
+		</action>
+		
+		<action name="ajaxAddAttention" class="com.feinno.nss.framework.controller.action.UserView.AjaxAction" method="addAttention">
+			<result type="json"></result>
+		</action>
+		
+		<action name="ajaxCancleAttention" class="com.feinno.nss.framework.controller.action.UserView.AjaxAction" method="cancleAttention">
+			<result type="json"></result>
+		</action>
+    </package>   
+</struts>

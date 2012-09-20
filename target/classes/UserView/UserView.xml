@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="com.feinno.nss.framework.controller.action.UserView"
+		namespace="/UserView" extends="test">
+		<action name="main"
+			class="com.feinno.nss.framework.controller.action.UserView.MainAction" >
+			<result name="success">/UserView/main.jsp</result>
+		</action>
+		
+		<action name="share"
+			class="com.feinno.nss.framework.controller.action.UserView.ShareAction" >
+			<result name="success">/UserView/share.jsp</result>
+		</action>
+		
+		<action name="info"
+			class="com.feinno.nss.framework.controller.action.UserView.InfoAction" >
+			<result name="success">/UserView/info.jsp</result>
+		</action>
+		
+		<action name="attention"
+			class="com.feinno.nss.framework.controller.action.UserView.AttentionAction" >
+			<result name="success">/UserView/attention.jsp</result>
+		</action>
+		
+		<action name="fans"
+			class="com.feinno.nss.framework.controller.action.UserView.FansAction" >
+			<result name="success">/UserView/fans.jsp</result>
+		</action>
+		
+	</package>
+</struts>

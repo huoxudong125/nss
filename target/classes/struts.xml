@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+         "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+         "http://struts.apache.org/dtds/struts-2.1.dtd">
+	<!-- 
+	加载子配置文件 Struts2框架的核心配置文件就是struts.xml配置文件，该文件主
+	要负责管理Struts2框架的业务控制器Action。 在默认情况下，Struts2框架将自
+	动加载放在WEB-INF/classes路径下的struts.xml文件。为了避免随着应用规模的
+	增加，而导致的struts.xml文件过于庞大，臃肿，从而是该文件的可读性下降。我们
+	可以将一个struts.xml配置文件分解成多个配置文件，然后在struts.xml文件中包含其他配置文件。
+ -->
+
+<struts>
+	<package name="default" extends="struts-default">
+		<default-action-ref name="index" />
+		<global-results>
+			<result name="error">/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception" result="error" />
+		</global-exception-mappings>
+		<action name="index">
+			<result type="redirectAction">
+				<param name="actionName">index</param>
+				<param name="namespace">/frame</param>
+			</result>
+		</action>
+		
+	</package>
+
+	<include file="example/example.xml" />
+	<include file="user/user.xml" />
+	<include file="outlink/outlink.xml" />
+	<include file="userGroup/userGroup.xml"/>
+	<include file="frame/frame.xml"/>
+	<include file="ajax/ajax.xml"/>
+	<include file="user/nssUser.xml" />
+	<include file="userGroup/ajaxUserGroup.xml" />
+	<include file="UserView/UserView.xml" />
+	<include file="file/myFile.xml"/>
+</struts>

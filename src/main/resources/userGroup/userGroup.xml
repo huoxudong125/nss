@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.feinno.nss.framework.controller.action.userGroup"
+		namespace="/userGroup" extends="json-default">
+
+		<action name="queryUserAttentionGroups"
+			class="com.feinno.nss.framework.controller.action.userGroup.UserGroupAction"
+			method="queryUserAttentionGroups">
+			<result>/myAttention/myAttentionGroups.jsp</result>
+		</action>
+
+		<action name="cancelAttentionGroup"
+			class="com.feinno.nss.framework.controller.action.userGroup.UserGroupAction"
+			method="cancelAttentionGroup">
+			<result name="success" type="json"></result>
+			<!-- <result type="redirect">queryUserAttentionGroups.action</result> -->
+		</action>
+
+		<action name="querySingleGroup"
+			class="com.feinno.nss.framework.controller.action.userGroup.UserGroupAction"
+			method="querySingleGroup">
+			<result>/userGroup/groupInfo.jsp</result>
+		</action>
+
+		<action name="updateUserGroupMapping"
+			class="com.feinno.nss.framework.controller.action.userGroup.UserGroupAction"
+			method="updateUserGroupMapping">
+			<result name="success" type="json"></result>
+			<!-- <result>/userGroup/groupInfo.jsp</result> -->
+		</action>
+
+		<action name="groupUpdate"
+			class="com.feinno.nss.framework.controller.action.userGroup.UserGroupAction"
+			method="groupUpdate">
+			<!-- <result name="input">/userGroup/groupInfo.jsp</result> -->
+			<result type="redirect">querySingleGroup.action?groupId=${groupId}&amp;tagIndex=6</result>
+		</action>
+
+		<action name="userGroupInfo"
+			class="com.feinno.nss.framework.controller.action.userGroup.UserGroupAction"
+			method="queryGroupList">
+			<result name="queryGroupList">/group/MyGroup.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<action name="userGroupAdd"
+			class="com.feinno.nss.framework.controller.action.userGroup.UserGroupAction"
+			method="groupAdd">
+			<result name="success" type="redirect">userGroupInfo.action</result>
+			<result name="error">../error.jsp</result>
+		</action>
+
+		<action name="openAddGroupMember"
+			class="com.feinno.nss.framework.controller.action.userGroup.AddMemberAction"
+			method="openaddMemberJsp">
+			<result name="success">/userGroup/addMember.jsp</result>
+			<result name="error">../error.jsp</result>
+		</action>
+
+		<action name="openaddBulletinJsp"
+			class="com.feinno.nss.framework.controller.action.userGroup.AddMemberAction"
+			method="openaddBulletinJsp">
+			<result name="success">/userGroup/updateBulletin.jsp</result>
+			<result name="error">../error.jsp</result>
+		</action>
+
+		<action name="openaIsVerifyJsp"
+			class="com.feinno.nss.framework.controller.action.userGroup.AddMemberAction"
+			method="openaIsVerifyJsp">
+			<result name="success">/userGroup/updateIsVerify.jsp</result>
+			<result name="error">../error.jsp</result>
+		</action>
+
+	</package>
+</struts>

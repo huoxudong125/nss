@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="com.feinno.nss.framework.controller.action.outlink" namespace="/outlink" extends="json-default">
+		<!-- list -->
+		<action name="list" class="com.feinno.nss.framework.controller.action.outlink.OutLinkAction" method="list">
+			<result name="list">/outlink/outlinkList.jsp</result>
+		</action>
+		<!-- edit -->
+		<action name="edit" class="com.feinno.nss.framework.controller.action.outlink.OutLinkAction" method="edit">
+			<result name="edit">/outlink/outlinkEdit.jsp</result>
+		</action>
+		<!-- editing -->
+		<action name="editing" class="com.feinno.nss.framework.controller.action.outlink.OutLinkAction" method="editing">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- deleting -->
+		<action name="deleting" class="com.feinno.nss.framework.controller.action.outlink.OutLinkAction" method="deleting">
+			<result name="list" type="redirect">/outlink/list.action</result>
+		</action>
+	</package>
+</struts>

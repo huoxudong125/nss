@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class dynamic-insert="true" dynamic-update="true"
+  name="com.feinno.nss.model.beans.Test" table="test">
+  <id name="id" type="string">
+   <column length="50" name="Id" not-null="true" sql-type="varchar"/>
+   <generator class="uuid.hex"/>
+  </id>
+  <property generated="never" lazy="false" name="name">
+   <column name="name" sql-type="varchar"/>
+  </property>
+ </class>
+</hibernate-mapping>

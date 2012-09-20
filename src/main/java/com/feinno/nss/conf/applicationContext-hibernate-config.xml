@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource">
+            <ref bean="dataSource"/>
+        </property>
+        <property name="mappingDirectoryLocations">
+            <value>classpath*:/com/feinno/nss/model/config</value>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">
+                    org.hibernate.dialect.MySQLDialect
+                </prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <!--
+                    <prop key="hibernate.cache.use_query_cache">true</prop>
+                     -->
+                <!--                 <prop key="hibernate.hbm2ddl.auto">update</prop> -->
+                <!-- 二级缓存Hashtable -->
+                <prop key="hibernate.cache.provider_class">
+                    org.hibernate.cache.HashtableCacheProvider
+                </prop>
+
+                <!-- 二级缓存ehcache
+                    <prop key="hibernate.cache.provider_class">
+                        org.hibernate.cache.EhCacheProvider
+                    </prop>
+                    <prop
+                        key="hibernate.cache.provider_configuration_file_resource_path">
+                        ehcache.xml
+                    </prop>
+                    -->
+                <!-- 二级缓存jbosscache -->
+                <!-- prop key="hibernate.cache.provider_class">org.hibernate.cache.TreeCacheProvider</prop
+                    <prop key="hibernate.query.substitutions"></prop>
+                    <prop key="hibernate.query.factory_class">
+                        org.hibernate.hql.ast.ASTQueryTranslatorFactory
+                    </prop>
+                    <prop key="hibernate.transaction.factory_class">
+                        org.hibernate.transaction.JTATransactionFactory
+                    </prop>-->
+                <!-- prop key="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</prop>
+                        <prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop -->
+                <prop key="hibernate.binary_or_blob">binary</prop>
+                <prop key="hibernate.jdbc.batch_size">25</prop>
+                <prop key="hibernate.jdbc.fatch_size">50</prop>
+                <!--
+                    <prop key="jta.UserTransaction">java:comp/UserTransaction</prop>
+                        <prop key="hibernate.transaction.flush_before_completion">true</prop>
+                        <prop key="hibernate.transaction.auto_close_session">true</prop>
+
+                    <prop
+                        key="hibernate.transaction.manager_lookup_class">
+                        org.hibernate.transaction.ResinTransactionManagerLookup
+                    </prop> -->
+            </props>
+        </property>
+    </bean>
+
+    <!-- 配置事务管理器 -->
+    <bean id="txManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <bean id="txProxyTemplate" lazy-init="true"
+          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+        <property name="transactionManager">
+            <ref bean="txManager" />
+        </property>
+        <property name="transactionAttributes">
+            <props>
+            	<prop key="save*">PROPAGATION_REQUIRED</prop>
+                <prop key="create*">PROPAGATION_REQUIRED</prop>
+                <prop key="record*">PROPAGATION_REQUIRED</prop>
+                <prop key="retrieve*">PROPAGATION_REQUIRED</prop>
+                <prop key="update*">PROPAGATION_REQUIRED</prop>
+                <prop key="delete*">PROPAGATION_REQUIRED</prop>
+                <prop key="list*">PROPAGATION_REQUIRED</prop>
+                <prop key="add*">PROPAGATION_REQUIRED</prop>
+                <prop key="del*">PROPAGATION_REQUIRED</prop>
+                <prop key="deploy*">PROPAGATION_REQUIRED</prop>
+                <prop key="submit*">PROPAGATION_REQUIRED</prop>
+                <prop key="flow*">PROPAGATION_REQUIRED</prop>
+                <prop key="sycn*">PROPAGATION_REQUIRED</prop>
+                <prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

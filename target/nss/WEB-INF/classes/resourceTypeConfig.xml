@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 文件类型对应表 -->
+<filetypes>
+	<filetype>
+		<name>FORDER</name>
+		<includes>forder</includes>
+		<image>0px,0px</image>
+	</filetype>
+	
+	<filetype>
+		<name>PIC</name>
+		<includes>jpg,jpeg,png,gif</includes>
+		<image>0px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>MUSIC</name>
+		<includes>mp3,wma</includes>
+		<image>-192px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>MOVIE</name>
+		<includes>rmvb,avi,mp4</includes>
+		<image>-224px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>WORD</name>
+		<includes>doc,docx</includes>
+		<image>-96px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>EXCEL</name>
+		<includes>xls,xlsx</includes>
+		<image>-128px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>PPT</name>
+		<includes>ppt,pptx</includes>
+		<image>-256px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>ZIP</name>
+		<includes>zip,rar</includes>
+		<image>-352px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>TXT</name>
+		<includes>txt,rtf</includes>
+		<image>-160px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>PDF</name>
+		<includes>pdf</includes>
+		<image>-64px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>IPA</name>
+		<includes>ipa</includes>
+		<image>-288px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>APK</name>
+		<includes>apk</includes>
+		<image>-384px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>EXE</name>
+		<includes>exe</includes>
+		<image>-320px,-80px</image>
+	</filetype>
+	
+	<filetype>
+		<name>OTHERS</name>
+		<includes></includes>
+		<image>-416px,-80px</image>
+	</filetype>
+	
+</filetypes>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="com.feinno.nss.framework.controller.action.nssUser"
+		namespace="/nssUser" extends="json-default">
+
+		<action name="quaryAttentionUsers"
+			class="com.feinno.nss.framework.controller.action.user.NssUserAction"
+			method="quaryAttentionUsers">
+			<result>/myAttention/myAttentionUsers.jsp</result>
+		</action>
+		
+		<action name="cancelAttentionUser"
+			class="com.feinno.nss.framework.controller.action.user.NssUserAction"
+			method="cancelAttentionUser">
+			<result name="success" type="json"></result>
+			<!-- 
+			<result type="redirect">quaryAttentionUsers.action</result>
+			 -->
+		</action>
+		
+		<action name="addAttentionUser"
+			class="com.feinno.nss.framework.controller.action.user.NssUserAction"
+			method="addAttentionUser">
+			<result name="success" type="json"></result>
+			<!-- 
+			<result type="redirect">quaryAttentionUsers.action</result>
+			 -->
+		</action>			
+		
+	</package>
+</struts>

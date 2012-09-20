@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="fileService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.feinno.nss.framework.business.impl.FileServiceImpl"
+				autowire="byName"></bean>
+		</property>
+	</bean>
+
+	<bean id="testService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.feinno.nss.framework.business.impl.TestServiceImpl"
+				autowire="byName"></bean>
+		</property>
+	</bean>
+
+	<bean id="userService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.feinno.nss.framework.business.impl.UserServiceImpl"
+				autowire="byName"></bean>
+		</property>
+	</bean>
+
+	<bean id="userGroupService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.feinno.nss.framework.business.impl.UserGroupService"
+				autowire="byName"></bean>
+		</property>
+	</bean>
+
+	<bean id="outLinkService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.feinno.nss.framework.business.impl.outLinkServiceImp"
+				autowire="byName"></bean>
+		</property>
+	</bean>
+
+	<bean id="nssUserService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.feinno.nss.framework.business.impl.NssUserService"
+				autowire="byName"></bean>
+		</property>
+	</bean>
+
+	<bean id="resourceTypeMappingService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.feinno.nss.framework.business.impl.ResourceTypeMappingService"
+				autowire="byName"></bean>
+		</property>
+	</bean>
+	
+	<bean id="systemResourceTypeService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.feinno.nss.framework.business.impl.SystemResourceTypeService"
+				autowire="byName"></bean>
+		</property>
+	</bean>
+	
+	<bean id="userAttentionService" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.feinno.nss.framework.business.impl.UserAttentionService"
+				autowire="byName"></bean>
+		</property>
+	</bean>
+</beans>

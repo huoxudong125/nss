@@ -1,0 +1,662 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>群详细信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="Stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="Stylesheet" type="text/css" href="../css/gheader.css" />
+    <link rel="Stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="Stylesheet" type="text/css" href="../css/jquery.ui.all.css" />
+    <script language="javascript" type="text/javascript" src="../js/jquery-1.6.3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/jquery.ui.core.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/jquery.ui.widget.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/jquery.ui.tabs.js"></script>
+    <script language="javascript" type="text/javascript">
+        $(function () {
+            $("#tabs").tabs({ selected: 0 });
+
+            $(":checkbox").bind("click", function () {
+
+                if ($(this).attr("checked") == "checked") {
+
+                    $("#fileActionHeader").show();
+                    $("#sortColsHeader").hide();
+                }
+                else {
+                    $("#fileActionHeader").hide();
+                    $("#sortColsHeader").show();
+                }
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <!--顶部导航-->
+    <div class="global_header">
+        <div class="header clearfix">
+            <div class="logo">
+                <img src="../images/logo_new.gif" alt="飞盘" />
+            </div>
+            <ul class="list">
+                <li><a href="index.htm" class="link">首页</a></li>
+                <li><a href="my.htm" class="link">我的网盘</a> </li>
+                <li class="current_page"><a href="group.htm" class="link">我所在的群</a> </li>
+                <li><a href="javascript:;" class="link">我的关注</a> </li>
+            </ul>
+            <div class="search">
+                <input title="搜索文本框" type="text" class="input" maxlength="40" value="查找文件" onfocus="javascript: if(this.value == '查找文件') this.value=''"
+                    onblur="javascript: if(this.value == '') this.value='查找文件'" /><a title="搜索按钮" href="javascript:void(0)"
+                        onclick="return false" class="btn"></a>
+            </div>
+            <div class="right">
+                <ul class="person">
+                    <li><a href="javascript:;" id="logout" class="link">退出</a> </li>
+                    <li><a href="javascript:void(0)" class="link">帮助</a> </li>
+                    <li><a href="javascript:void(0)" class="link">消息</a> </li>
+                    <li><a href="javascript:void(0)" class="link">刘海涛</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--/顶部导航-->
+    <div class="main">
+        <div class="mainleft wide">
+            <ul class="b-list-3">
+                <li><a href="#"><span class="grouptitle">北京研发中心<img src="../images/groupflag.jpg"
+                    class="groupflag" /></a> </li>
+                <li class="separator-1" />
+                <li>
+                    <img src="../images/userandgroup.jpg" class="porfiledetailimg" />
+                </li>
+                <li class="separator-1" />
+                <li>
+                    <p>
+                        <b>创建人：</b>钱国红</p>
+                </li>
+                <li class="separator-1" />
+                <li>
+                    <p>
+                        <b>注册日期：</b>2012-03-29
+                    </p>
+                    <p>
+                        <b>加入日期：</b>2012-05-29
+                    </p>
+                    <p>
+                        <b>访问：</b> 153次 | <b>排名：</b>230
+                    </p>
+                    <p>
+                        <b>分享：</b> 183个 | <b>排名：</b>260
+                    </p>
+                </li>
+                <li class="separator-1" />
+                <li>
+                    <p>
+                        <b>简介：</b> 春天里的故事，是很美很美的感觉；但秋天还是来了....
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="mainright">
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">群主页</a></li>
+                    <li><a href="#tabs-2">群资源</a></li>
+                    <li><a href="#tabs-3">群资料</a></li>
+                    <li><a href="#tabs-4">群成员(6)</a></li>
+                    <li><a href="#tabs-5">群粉丝(9)</a></li>
+                    <li><a href="#tabs-6">群设置</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <dl>
+                        <dt class="groupsetdt">
+                            <p class="groupsettitle">
+                                群信息</p>
+                        </dt>
+                        <dd>
+                            <p class="groupsetinfo">
+                                群&nbsp;&nbsp;名&nbsp;&nbsp;称：北京研发中心</p>
+                            <p class="groupsetinfo">
+                                创&nbsp;&nbsp;建&nbsp;&nbsp;人：钱国红
+                            </p>
+                            <p class="groupsetinfo">
+                                创建日期： 2012-03-29
+                            </p>
+                            <p class="groupsetinfo">
+                                群&nbsp;&nbsp;简&nbsp;&nbsp;介： 春天很美丽啊很美丽的春天，杨光明媚风景宜人，明天去哪里玩呢？郁闷......
+                            </p>
+                            <p class="groupsetinfo">
+                                <a href="#">更多群资料 >></a>
+                            </p>
+                            <p class="groupaffiche">
+                                <span class="groupaffichetitle"><b>群内公告</b></span> <span class="groupaffichecontent">
+                                    从今天开始，大家不要再在群里乱发照片了啊，搞得乱糟糟的。 </span><span class="groupafficheadd"><a href="#">[发布新公告]</a>
+                                    </span>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dt class="groupsetdt">
+                        <p class="groupsettitle">
+                            最新动态</p>
+                    </dt>
+                    <dd>
+                        <div class="all-files-headers" style="display: block;">
+                            <!--文件的操作-->
+                            <header class="files-header b-header b-bdr-7" id="fileActionHeader" style="display: none;">
+                <p>
+                   <span class="b-fl input-cbx selectionArbitrate">
+                     <dfn>
+                     <s class="sprite"></s>
+                     </dfn>
+                   </span>
+                   <span class="check-all">
+                   全选
+                   </span>
+                   <span id="Span1">
+                   已选中1个文件/文件夹
+                   </span>
+                   <span class="clearfix" id="Span2">
+                     <a class="bbtn disabled" id="A3"  href="#" onclick="javascript:void(0);" >
+                      <b>分享到OA</b>
+                     </a>
+                     <a class="bbtn disabled" id="A5"   href="#" onclick="javascript:void(0);" >
+                     <b>分享给指定用户</b>
+                     </a>
+                       <a class="bbtn disabled" id="A7"   href="#" onclick="javascript:void(0);" >
+                     <b>分享到群</b>
+                     </a>
+                       <a class="bbtn disabled" id="A8"   href="#" onclick="javascript:void(0);" >
+                     <b>生成外链</b>
+                     </a>
+                     <a class="bbtn disabled" id="A9"   href="#" onclick="javascript:void(0);" >
+                      <b>下载</b>
+                     </a>
+                     <a class="bbtn disabled" id="A10"   href="#" onclick="javascript:void(0);" >
+                      <b>复制</b>
+                     </a>
+                       <a class="bbtn disabled" id="A11"   href="#" onclick="javascript:void(0);" >
+                      <b>移动</b>
+                     </a>
+                     <a class="bbtn disabled" id="A12"   href="#" onclick="javascript:void(0);" >
+                      <b>重命名</b>
+                     </a>
+                       <a class="bbtn disabled" id="A13"   href="#" onclick="javascript:void(0);" >
+                      <b>删除</b>
+                     </a>
+                   </span>
+                </p>
+              </header>
+                            <!--文件的头-->
+                            <header class="files-header b-header b-bdr-7" id="sortColsHeader" style="display: block;">
+              <div class="clearfix">
+                <div class="c1 col">
+                <a class="indicator b-ig-ln indicator-name desc" id="A14" href="javascript:;">
+                   <s class="indicator-cols clearfix">
+                    <!--  <span class="b-fl input-cbx selectionArbitrate" >
+                   <dfn><s class="sprite"></s> </dfn>
+                     
+                      </span>-->
+                      <span  style=" margin-left:15px;" ><input type="checkbox" flag="allckb"  /></span> 
+                      <span class="itt-10">
+                      文件名
+                      </span>
+                      
+                   </s>
+                </a>
+                </div>
+
+                <div class="c2 col">
+                <a class="indicator b-ig-ln" id="A15" hideFocus="" href="javascript:;">
+                    <s class="indicator-cols clearfix">
+                    <span class="itt-10">
+                      大小
+                    </span>
+                    </s>
+                </a>
+                </div>
+
+                <div class="c3 col">
+                  <a class="indicator b-ig-ln" id="A16" hideFocus="" href="javascript:;">
+                   <s class="indicator-cols clearfix">
+                   <span>修改日期</span>
+                   </s>
+                  </a>
+                </div>
+              </div>
+              </header>
+                        </div>
+                        <dd class="clearfix file-item">
+                            <div title="我的视频" class="file-col col">
+                                <span class="inline-commands b-btn clearfix"></span><span class="inline-file-col">
+                                    <input type="checkbox" style="margin-left: 15px; margin-top: 15px" />
+                                    <span class="b-in-blk sprite-list-ic b-ic-book" style="cursor: pointer; background-position-x: 0px;
+                                        background-position-y: 0px; position: absolute; margin-top: 11px; margin-left: 10px;">
+                                    </span><a title="我的视频" class="file-handler b-no-ln dir-handler" style="cursor: pointer;"
+                                        href="javascript:;">我的视频 </a></span>
+                            </div>
+                            <div class="size-col col">
+                                <span style="line-height: 37px;">- </span>
+                            </div>
+                            <div class="time-col col">
+                                <span style="line-height: 37px;">2012-08-17 10:10 </span>
+                            </div>
+                        </dd>
+                        <dd class="clearfix file-item">
+                            <div title="新建文件夹" class="file-col col">
+                                <span class="inline-commands b-btn clearfix"></span><span class="inline-file-col">
+                                    <input type="checkbox" style="margin-left: 15px; margin-top: 15px" />
+                                    <span class="b-in-blk sprite-list-ic b-ic-book" style="cursor: pointer; background-position-x: 0px;
+                                        background-position-y: 0px; position: absolute; margin-top: 11px; margin-left: 10px;">
+                                    </span><a title="新建文件夹" class="file-handler b-no-ln dir-handler" style="cursor: pointer;"
+                                        href="javascript:;">新建文件夹 </a></span>
+                            </div>
+                            <div class="size-col col">
+                                <span style="line-height: 37px;">- </span>
+                            </div>
+                            <div class="time-col col">
+                                <span style="line-height: 37px;">2012-08-17 10:10 </span>
+                            </div>
+                        </dd>
+                    </dd>
+                    <dl>
+                        <dd class="clearfix file-item">
+                            <div title="陈楚生-相忘于江湖.mp3" class="file-col col">
+                                <span class="inline-commands b-btn clearfix"></span><span class="inline-file-col">
+                                    <input type="checkbox" style="margin-left: 15px; margin-top: 15px" />
+                                    <span class="b-in-blk sprite-list-ic b-ic-book" style="cursor: pointer; background-position-x: -192px;
+                                        background-position-y: -80px; position: absolute; margin-top: 11px; margin-left: 10px;">
+                                    </span><a title="陈楚生-相忘于江湖.mp3" class="file-handler b-no-ln dir-handler" style="cursor: pointer;"
+                                        href="javascript:;">陈楚生-相忘于江湖.mp3 </a></span>
+                            </div>
+                            <div class="size-col col">
+                                <span style="line-height: 37px;">3.9MB </span>
+                            </div>
+                            <div class="time-col col">
+                                <span style="line-height: 37px;">2012-08-17 10:10 </span>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div id="tabs-2">
+                    <div class="all-files-headers" style="display: block;">
+                        <!--文件的操作-->
+                        <header class="files-header b-header b-bdr-7" id="fileActionHeader" style="display: none;">
+                <p>
+                   <span class="b-fl input-cbx selectionArbitrate">
+                     <dfn>
+                     <s class="sprite"></s>
+                     </dfn>
+                   </span>
+                   <span class="check-all">
+                   全选
+                   </span>
+                   <span id="file_action_word">
+                   已选中1个文件/文件夹
+                   </span>
+                   <span class="clearfix" id="file_action_buttons">
+                     <a class="bbtn disabled" id="barCmdPublicAll"  href="#" onclick="javascript:void(0);" >
+                      <b>分享到OA</b>
+                     </a>
+                     <a class="bbtn disabled" id="barCmdShareAll"   href="#" onclick="javascript:void(0);" >
+                     <b>分享给指定用户</b>
+                     </a>
+                       <a class="bbtn disabled" id="A1"   href="#" onclick="javascript:void(0);" >
+                     <b>分享到群</b>
+                     </a>
+                       <a class="bbtn disabled" id="A2"   href="#" onclick="javascript:void(0);" >
+                     <b>生成外链</b>
+                     </a>
+                     <a class="bbtn disabled" id="barCmdDownload"   href="#" onclick="javascript:void(0);" >
+                      <b>下载</b>
+                     </a>
+                     <a class="bbtn disabled" id="barCmdCopy"   href="#" onclick="javascript:void(0);" >
+                      <b>复制</b>
+                     </a>
+                       <a class="bbtn disabled" id="A4"   href="#" onclick="javascript:void(0);" >
+                      <b>移动</b>
+                     </a>
+                     <a class="bbtn disabled" id="A6"   href="#" onclick="javascript:void(0);" >
+                      <b>重命名</b>
+                     </a>
+                       <a class="bbtn disabled" id="barCmdDelete"   href="#" onclick="javascript:void(0);" >
+                      <b>删除</b>
+                     </a>
+                   </span>
+                </p>
+              </header>
+                        <!--文件的头-->
+                        <header class="files-header b-header b-bdr-7" id="sortColsHeader" style="display: block;">
+              <div class="clearfix">
+                <div class="c1 col">
+                <a class="indicator b-ig-ln indicator-name desc" id="nameCompareTrigger" href="javascript:;">
+                   <s class="indicator-cols clearfix">
+                    <!--  <span class="b-fl input-cbx selectionArbitrate" >
+                   <dfn><s class="sprite"></s> </dfn>
+                     
+                      </span>-->
+                      <span  style=" margin-left:15px;" ><input type="checkbox" flag="allckb"  /></span> 
+                      <span class="itt-10">
+                      文件名
+                      </span>
+                      
+                   </s>
+                </a>
+                </div>
+
+                <div class="c2 col">
+                <a class="indicator b-ig-ln" id="sizeCompareTrigger" hideFocus="" href="javascript:;">
+                    <s class="indicator-cols clearfix">
+                    <span class="itt-10">
+                      大小
+                    </span>
+                    </s>
+                </a>
+                </div>
+
+                <div class="c3 col">
+                  <a class="indicator b-ig-ln" id="timeCompareTrigger" hideFocus="" href="javascript:;">
+                   <s class="indicator-cols clearfix">
+                   <span>修改日期</span>
+                   </s>
+                  </a>
+                </div>
+              </div>
+              </header>
+                    </div>
+                    <dd class="clearfix file-item">
+                        <div title="我的视频" class="file-col col">
+                            <span class="inline-commands b-btn clearfix"></span><span class="inline-file-col">
+                                <input type="checkbox" style="margin-left: 15px; margin-top: 15px" />
+                                <span class="b-in-blk sprite-list-ic b-ic-book" style="cursor: pointer; background-position-x: 0px;
+                                    background-position-y: 0px; position: absolute; margin-top: 11px; margin-left: 10px;">
+                                </span><a title="我的视频" class="file-handler b-no-ln dir-handler" style="cursor: pointer;"
+                                    href="javascript:;">我的视频 </a></span>
+                        </div>
+                        <div class="size-col col">
+                            <span style="line-height: 37px;">- </span>
+                        </div>
+                        <div class="time-col col">
+                            <span style="line-height: 37px;">2012-08-17 10:10 </span>
+                        </div>
+                    </dd>
+                    <dd class="clearfix file-item">
+                        <div title="新建文件夹" class="file-col col">
+                            <span class="inline-commands b-btn clearfix"></span><span class="inline-file-col">
+                                <input type="checkbox" style="margin-left: 15px; margin-top: 15px" />
+                                <span class="b-in-blk sprite-list-ic b-ic-book" style="cursor: pointer; background-position-x: 0px;
+                                    background-position-y: 0px; position: absolute; margin-top: 11px; margin-left: 10px;">
+                                </span><a title="新建文件夹" class="file-handler b-no-ln dir-handler" style="cursor: pointer;"
+                                    href="javascript:;">新建文件夹 </a></span>
+                        </div>
+                        <div class="size-col col">
+                            <span style="line-height: 37px;">- </span>
+                        </div>
+                        <div class="time-col col">
+                            <span style="line-height: 37px;">2012-08-17 10:10 </span>
+                        </div>
+                    </dd>
+                    <dd class="clearfix file-item">
+                        <div title="照片.jpg" class="file-col col">
+                            <span class="inline-commands b-btn clearfix"></span><span class="inline-file-col">
+                                <input type="checkbox" style="margin-left: 15px; margin-top: 15px" />
+                                <span class="b-in-blk sprite-list-ic b-ic-book" style="cursor: pointer; background-position-x: 0px;
+                                    background-position-y: -80px; position: absolute; margin-top: 11px; margin-left: 10px;">
+                                </span><a title="照片.jpg" class="file-handler b-no-ln dir-handler" style="cursor: pointer;"
+                                    href="javascript:;">照片.jpg </a></span>
+                        </div>
+                        <div class="size-col col">
+                            <span style="line-height: 37px;">12KB </span>
+                        </div>
+                        <div class="time-col col">
+                            <span style="line-height: 37px;">2012-08-17 10:10 </span>
+                        </div>
+                    </dd>
+                    <dd class="clearfix file-item">
+                        <div title="陈楚生-相忘于江湖.mp3" class="file-col col">
+                            <span class="inline-commands b-btn clearfix"></span><span class="inline-file-col">
+                                <input type="checkbox" style="margin-left: 15px; margin-top: 15px" />
+                                <span class="b-in-blk sprite-list-ic b-ic-book" style="cursor: pointer; background-position-x: -192px;
+                                    background-position-y: -80px; position: absolute; margin-top: 11px; margin-left: 10px;">
+                                </span><a title="陈楚生-相忘于江湖.mp3" class="file-handler b-no-ln dir-handler" style="cursor: pointer;"
+                                    href="javascript:;">陈楚生-相忘于江湖.mp3 </a></span>
+                        </div>
+                        <div class="size-col col">
+                            <span style="line-height: 37px;">3.9MB </span>
+                        </div>
+                        <div class="time-col col">
+                            <span style="line-height: 37px;">2012-08-17 10:10 </span>
+                        </div>
+                    </dd>
+                    <dd class="clearfix file-item">
+                        <div title="规定及说明.docx" class="file-col col">
+                            <span class="inline-commands b-btn clearfix"></span><span class="inline-file-col">
+                                <input type="checkbox" style="margin-left: 15px; margin-top: 15px" />
+                                <span class="b-in-blk sprite-list-ic b-ic-book" style="cursor: pointer; background-position-x: -96px;
+                                    background-position-y: -80px; position: absolute; margin-top: 11px; margin-left: 10px;">
+                                </span><a title="规定及说明.docx" class="file-handler b-no-ln dir-handler" style="cursor: pointer;"
+                                    href="javascript:;">规定及说明.docx </a></span>
+                        </div>
+                        <div class="size-col col">
+                            <span style="line-height: 37px;">50KB </span>
+                        </div>
+                        <div class="time-col col">
+                            <span style="line-height: 37px;">2012-08-17 10:10 </span>
+                        </div>
+                    </dd>
+                    <dd class="clearfix file-item">
+                        <div title="产品列表.xls" class="file-col col">
+                            <span class="inline-commands b-btn clearfix"></span><span class="inline-file-col">
+                                <input type="checkbox" style="margin-left: 15px; margin-top: 15px" />
+                                <span class="b-in-blk sprite-list-ic b-ic-book" style="cursor: pointer; background-position-x: -128px;
+                                    background-position-y: -80px; position: absolute; margin-top: 11px; margin-left: 10px;">
+                                </span><a title="产品列表.xls" class="file-handler b-no-ln dir-handler" style="cursor: pointer;"
+                                    href="javascript:;">产品列表.xls </a></span>
+                        </div>
+                        <div class="size-col col">
+                            <span style="line-height: 37px;">50KB </span>
+                        </div>
+                        <div class="time-col col">
+                            <span style="line-height: 37px;">2012-08-17 10:10 </span>
+                        </div>
+                    </dd>
+                </div>
+                <div id="tabs-3">
+                    <dl>
+                        <dt class="groupsetdt">
+                            <p class="groupsettitle">
+                                基本资料</p>
+                        </dt>
+                        <dd>
+                            <p class="groupsetinfo">
+                                群名称：北京研发中心 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">修改群资料</a>&nbsp;&nbsp; <a href="#">申请V认证</a></p>
+                            <p class="groupsetinfo">
+                                群简介： 春天很美丽啊很美丽的春天，杨光明媚风景宜人，明天去哪里玩呢？郁闷......
+                            </p>
+                            <p class="groupsetinfo">
+                                群头像：&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">重新上传图像</a>
+                            </p>
+                            <p class="groupsetinfo">
+                                <img src="../images/userandgroup.jpg" class="porfiledetailimg" />
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="groupsetdt">
+                            <p class="groupsettitle">
+                                其他资料</p>
+                        </dt>
+                        <dd>
+                            <p class="groupsetinfo">
+                                创建人： 钱国红</p>
+                            <p class="groupsetinfo">
+                                管理员： 张三 李四
+                            </p>
+                            <p class="groupsetinfo">
+                                成&nbsp;&nbsp;&nbsp;员：王五 赵六
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+                <div id="tabs-4">
+                    <div class="mygrouplist">
+                        <p>
+                            <input type="button" value="[添加群成员]" class="quitgroup" />
+                        </p>
+                        <dl>
+                            <dt>
+                                <img src="../images/profile2.jpg" />
+                            </dt>
+                            <dd>
+                                <p>
+                                    <a href="#">钱国红</a> <span class="groupcreateflag">创建者</span>
+                                    <input type="button" value="加关注" class="dropgroup" />
+                                </p>
+                                <p>
+                                    关注: 29 粉丝: 20 分享文件数：30
+                                </p>
+                                <p>
+                                    简介： 今天是个好日子，天气晴朗，很适合外出旅游，有喜欢爬山的朋友不？不知道明天天气将会如何，这个周末休三天了....
+                                </p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="../images/profile2.jpg" />
+                            </dt>
+                            <dd>
+                                <p>
+                                    <a href="#">冯伟伟</a> <span class="groupadminflag">管理员</span>
+                                    <input type="button" value="加关注" class="quitgroup" />
+                                    <input type="button" value="删除成员" class="quitgroup" />
+                                    <input type="button" value="取消管理员" class="quitgroup" />
+                                </p>
+                                <p>
+                                    关注: 29 粉丝: 20 分享文件数：30
+                                </p>
+                                <p>
+                                    简介： 今天是个好日子，天气晴朗，很适合外出旅游，有喜欢爬山的朋友不？不知道明天天气将会如何，这个周末休三天了....
+                                </p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="../images/profile2.jpg" />
+                            </dt>
+                            <dd>
+                                <p>
+                                    <a href="#">王维</a>
+                                    <input type="button" value="加关注" class="quitgroup" />
+                                    <input type="button" value="删除成员" class="quitgroup" />
+                                    <input type="button" value="设置管理员" class="quitgroup" />
+                                </p>
+                                <p>
+                                    关注: 29 粉丝: 20 分享文件数：300
+                                </p>
+                                <p>
+                                    简介： 今天是个好日子，天气晴朗，很适合外出旅游，有喜欢爬山的朋友不？不知道明天天气将会如何，这个周末休三天了....
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div id="tabs-5">
+                    <div class="mygrouplist">
+                        <dl>
+                            <dt>
+                                <img src="../images/profile2.jpg" />
+                            </dt>
+                            <dd>
+                                <p>
+                                    <a href="#">刘海涛</a>
+                                    <input type="button" value="加关注" class="dropgroup" />
+                                </p>
+                                <p>
+                                    关注: 29 粉丝: 20 分享文件数：30
+                                </p>
+                                <p>
+                                    简介： 今天是个好日子，天气晴朗，很适合外出旅游，有喜欢爬山的朋友不？不知道明天天气将会如何，这个周末休三天了....
+                                </p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="../images/profile2.jpg" />
+                            </dt>
+                            <dd>
+                                <p>
+                                    <a href="#">冯伟伟</a>
+                                    <input type="button" value="加关注" class="quitgroup" />
+                                </p>
+                                <p>
+                                    关注: 29 粉丝: 20 分享文件数：30
+                                </p>
+                                <p>
+                                    简介： 今天是个好日子，天气晴朗，很适合外出旅游，有喜欢爬山的朋友不？不知道明天天气将会如何，这个周末休三天了....
+                                </p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="../images/profile2.jpg" />
+                            </dt>
+                            <dd>
+                                <p>
+                                    <a href="#">王维</a>
+                                    <input type="button" value="加关注" class="quitgroup" />
+                                </p>
+                                <p>
+                                    关注: 29 粉丝: 20 分享文件数：300
+                                </p>
+                                <p>
+                                    简介： 今天是个好日子，天气晴朗，很适合外出旅游，有喜欢爬山的朋友不？不知道明天天气将会如何，这个周末休三天了....
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div id="tabs-6">
+                    <dl>
+                        <dt class="groupsetdt">
+                            <p class="groupsettitle">
+                                群消息设置</p>
+                        </dt>
+                        <dd>
+                            <p class="groupsetinfo">
+                                <input type="checkbox" />共享申请消息短信提醒</p>
+                            <p class="groupsetinfo">
+                                <input type="checkbox" />共享申请邮件提醒</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="groupsetdt">
+                            <p class="groupsettitle">
+                                群组内设置</p>
+                        </dt>
+                        <dd>
+                            <p class="groupsetinfo">
+                                <input type="checkbox" />允许非管理员角色邀请成员到本群组</p>
+                            <p class="groupsetinfo">
+                                <input type="checkbox" />允许非管理员角色修改文件分类</p>
+                            <p class="groupsetinfo">
+                                <input type="checkbox" />群组文件默认为可搜但需分享申请可下载</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="groupsetdt">
+                            <p class="groupsettitle">
+                                身份验证</p>
+                        </dt>
+                        <dd>
+                            <p class="groupsetinfo">
+                                <input type="radio" />任何人都可以加入本群</p>
+                            <p class="groupsetinfo">
+                                <input type="radio" />需管理员同意才能加入本群</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

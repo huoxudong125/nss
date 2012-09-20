@@ -1,0 +1,428 @@
+﻿BODY
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+H1
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+H2
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+H3
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+H4
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+H5
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+H6
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+HR
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+P
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+BLOCKQUOTE
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+DL
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+DT
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+DD
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+UL
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+OL
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+LI
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+PRE
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+FORM
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+FIELDSET
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+LEGEND
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+BUTTON
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+INPUT
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+TEXTAREA
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+TH
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+TD
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+figure
+{
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+HTML
+{
+    /*background-color: #e9ecec;*/
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+}
+TABLE
+{
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+section
+{
+    display: block;
+}
+article
+{
+    display: block;
+}
+aside
+{
+    display: block;
+}
+header
+{
+    display: block;
+}
+footer
+{
+    display: block;
+}
+nav
+{
+    display: block;
+}
+dialog
+{
+    display: block;
+}
+figure
+{
+    display: block;
+}
+.clearfix:after
+{
+    line-height: 0;
+    display: block;
+    height: 0px;
+    clear: both;
+    font-size: 0px;
+    content: " ";
+}
+BODY
+{
+    font: 12px/1.5 tahoma,arial,宋体;
+    color: #333;
+}
+BUTTON
+{
+    font: 12px/1.5 tahoma,arial,宋体;
+    color: #333;
+}
+INPUT
+{
+    font: 12px/1.5 tahoma,arial,宋体;
+    color: #333;
+}
+SELECT
+{
+    font: 12px/1.5 tahoma,arial,宋体;
+    color: #333;
+}
+TEXTAREA
+{
+    font: 12px/1.5 tahoma,arial,宋体;
+    color: #333;
+}
+TD
+{
+    font: 12px/1.5 tahoma,arial,宋体;
+    color: #333;
+}
+TH
+{
+    font: 12px/1.5 tahoma,arial,宋体;
+    color: #333;
+}
+H1
+{
+    font-size: 100%;
+}
+H2
+{
+    font-size: 100%;
+}
+H3
+{
+    font-size: 100%;
+}
+H4
+{
+    font-size: 100%;
+}
+H5
+{
+    font-size: 100%;
+}
+H6
+{
+    font-size: 100%;
+}
+ADDRESS
+{
+    font-style: normal;
+}
+CITE
+{
+    font-style: normal;
+}
+DFN
+{
+    font-style: normal;
+}
+EM
+{
+    font-style: normal;
+}
+VAR
+{
+    font-style: normal;
+}
+CODE
+{
+    font-family: courier new,courier,monospace;
+}
+KBD
+{
+    font-family: courier new,courier,monospace;
+}
+PRE
+{
+    font-family: courier new,courier,monospace;
+}
+SAMP
+{
+    font-family: courier new,courier,monospace;
+}
+SMALL
+{
+    font-size: 12px;
+}
+UL
+{
+    list-style-type: none;
+}
+OL
+{
+    list-style-type: none;
+}
+A
+{
+    color: #06c;
+    text-decoration: none;
+}
+A:hover
+{
+    color: #06c;
+    text-decoration: underline;
+}
+SUP
+{
+    vertical-align: text-top;
+}
+SUB
+{
+    vertical-align: text-bottom;
+}
+LEGEND
+{
+    color: #000;
+}
+FIELDSET
+{
+    border-bottom: 0px;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+}
+IMG
+{
+    border-bottom: 0px;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+}
+BUTTON
+{
+    font-size: 100%;
+}
+INPUT
+{
+    font-size: 100%;
+}
+SELECT
+{
+    font-size: 100%;
+}
+TEXTAREA
+{
+    font-size: 100%;
+}
+TABLE
+{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+INPUT:focus
+{
+    outline-style: none;
+}

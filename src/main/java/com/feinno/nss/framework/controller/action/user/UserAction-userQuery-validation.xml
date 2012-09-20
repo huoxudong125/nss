@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//OpenSymphony Group//XWork Validator 1.0//EN"   		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+  		
+<validators>
+	<validator type="expression">
+		<param name="expression">
+			<![CDATA[(uq.age2>0&&uq.age<=uq.age2)||uq.age2==0]]>
+		</param>
+		<message>您输入的年龄最小值大于最大值</message>
+	</validator>
+</validators>

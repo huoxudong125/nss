@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>我所在的群</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="Stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="Stylesheet" type="text/css" href="../css/gheader.css" />
+    <link rel="Stylesheet" type="text/css" href="../css/main.css" />
+        <script language="javascript" type="text/javascript" src="../js/jquery-1.6.3.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="../js/artDialog/skins/default.css" />
+    <script language="javascript" type="text/javascript" src="../js/artDialog/artDialog.js?skin=default"></script>
+    <script language="javascript" type="text/javascript" src="../js/artDialog/plugins/iframeTools.source.js"></script>
+
+    <script language="javascript" type="text/javascript">
+        $(function () {
+            $(".dropgroup").bind("click", function () {
+                art.dialog.confirm('你确定要销毁此群吗？', function () {
+                    alert("销毁成功");
+                }, function () {
+                    art.dialog.tips('你取消了操作');
+                });
+            });
+
+            $(".quitgroup").bind("click", function () {
+                art.dialog.confirm('你确定要退出此群吗？', function () {
+                    alert("退出成功");
+                }, function () {
+                    art.dialog.tips('你取消了操作');
+                });
+            });
+
+            $("#creategroup").bind("click", function () {
+                art.dialog.open('creategroup.htm', { title: '创建群', width: 500, height: 400 });
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <!--顶部导航-->
+    <div class="global_header">
+        <div class="header clearfix">
+            <div class="logo">
+                <img src="../images/logo_new.gif" alt="飞盘" />
+            </div>
+            <ul class="list">
+                <li><a href="index.htm" class="link">首页</a></li>
+                <li><a href="my.htm" class="link">我的网盘</a> </li>
+                <li class="current_page"><a href="group.htm" class="link">我所在的群</a> </li>
+                <li><a href="javascript:;" class="link">我的关注</a> </li>
+            </ul>
+            <div class="search">
+                <input title="搜索文本框" type="text" class="input" maxlength="40" value="查找文件" onfocus="javascript: if(this.value == '查找文件') this.value=''"
+                    onblur="javascript: if(this.value == '') this.value='查找文件'" /><a title="搜索按钮" href="javascript:void(0)"
+                        onclick="return false" class="btn"></a>
+            </div>
+            <div class="right">
+                <ul class="person">
+                    <li><a href="javascript:;" id="logout" class="link">退出</a> </li>
+                    <li><a href="javascript:void(0)" class="link">帮助</a> </li>
+                    <li><a href="javascript:void(0)" class="link">消息</a> </li>
+                    <li><a href="javascript:void(0)" class="link">刘海涛</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--/顶部导航-->
+    <div class="main">
+        <div class="mainleft">
+            <ul class="b-list-3">
+                <li><a href="group.htm" class="on"><span class="text1"><span /></span>我所在的群</a> </li>
+                <li class="separator-1" />
+                <li><a href="#" id="creategroup"><span class="text1"><span /></span>创建群</a> </li>
+            </ul>
+        </div>
+        <div class="mainright">
+            <div class="mygrouptitle">
+                <span>我所在的群 (3)</span>
+            </div>
+            <div class="mygrouplist">
+                <dl>
+                    <dt>
+                        <img src="../images/profile2.jpg" />
+                    </dt>
+                    <dd>
+                        <p>
+                            <a href="#">北京研发中心</a> &nbsp; &nbsp; &nbsp; &nbsp; 创建人: 钱国红 &nbsp; &nbsp; &nbsp;
+                            &nbsp; 管理员: 张三 李四&nbsp; &nbsp; &nbsp; &nbsp; 加入时间: 2012-08-20
+                            <input type="button" value="销毁群" class="dropgroup" />
+                        </p>
+                        <p>
+                            成员: 29 粉丝: 20 分享文件数：30
+                        </p>
+                        <p>
+                            简介： 今天是个好日子，天气晴朗，很适合外出旅游，有喜欢爬山的朋友不？不知道明天天气将会如何，这个周末休三天了....
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <img src="../images/profile2.jpg" />
+                    </dt>
+                    <dd>
+                        <p>
+                            <a href="#">object-c兴趣小组</a> &nbsp; &nbsp; &nbsp; &nbsp; 创建人: 钱国红 &nbsp; &nbsp;
+                            &nbsp; &nbsp; 管理员: 张三 李四&nbsp; &nbsp; &nbsp; &nbsp; 加入时间: 2012-08-20
+                            <input type="button" value="退出群" class="quitgroup" />
+                        </p>
+                        <p>
+                            成员: 29 粉丝: 20 分享文件数：30
+                        </p>
+                        <p>
+                            简介： 今天是个好日子，天气晴朗，很适合外出旅游，有喜欢爬山的朋友不？不知道明天天气将会如何，这个周末休三天了....
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <img src="../images/profile2.jpg" />
+                    </dt>
+                    <dd>
+                        <p>
+                            <a href="#">.net俱乐部</a> &nbsp; &nbsp; &nbsp; &nbsp; 创建人: 钱国红 &nbsp; &nbsp; &nbsp;
+                            &nbsp; 管理员: 张三 李四&nbsp; &nbsp; &nbsp; &nbsp; 加入时间: 2012-08-20
+                            <input type="button" value="退出群" class="quitgroup"/>
+                        </p>
+                        <p>
+                            成员: 29 粉丝: 20 分享文件数：300
+                        </p>
+                        <p>
+                            简介： 今天是个好日子，天气晴朗，很适合外出旅游，有喜欢爬山的朋友不？不知道明天天气将会如何，这个周末休三天了....
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        &nbsp;
+    </div>
+</body>
+</html>

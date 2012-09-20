@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<systemConfig>
+	<!-- 平台系统名称 -->
+	<platformTitle>飞盘</platformTitle>
+
+	<!-- 平台的请求后缀名 -->
+	<actionExt>do</actionExt>
+
+	<!-- 分页时每页显示的条目数 -->
+	<pageSize>10</pageSize>
+
+	<!-- Session超时时间（分钟） -->
+	<sessionTimeOut>30</sessionTimeOut>
+	
+	<dayFileInRecycle>100</dayFileInRecycle>
+</systemConfig>

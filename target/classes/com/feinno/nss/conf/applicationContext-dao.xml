@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="testDao" class="com.feinno.nss.persistence.impl.TestDaoImpl" autowire="byName" />
+	<bean id="userDao" class="com.feinno.nss.persistence.impl.UserDao" autowire="byName" />
+	<bean id="userGroupDao" class="com.feinno.nss.persistence.impl.UserGroupDao" autowire="byName" />
+	<bean id="outLinkDao" class="com.feinno.nss.persistence.impl.OutLinkDao" autowire="byName" />
+	<bean id="nssUserDao" class="com.feinno.nss.persistence.impl.NssUserDao" autowire="byName" />	
+	<bean id="fileDao" class="com.feinno.nss.persistence.impl.FileDao" autowire="byName" />
+	<bean id="userGroupMappingDao" class="com.feinno.nss.persistence.impl.UserGroupMappingDao" autowire="byName" />
+	<bean id="userAttentionMappinDao" class="com.feinno.nss.persistence.impl.UserAttentionMappingDao" autowire="byName" />
+	<bean id="resourceTypeMappingDao" class="com.feinno.nss.persistence.impl.ResourceTypeMappingDao" autowire="byName" />
+	<bean id="systemResourceTypeDao" class="com.feinno.nss.persistence.impl.SystemResourceTypeDao" autowire="byName" />
+	<bean id="userAttentionDao" class="com.feinno.nss.persistence.impl.UserAttentionDao" autowire="byName" />
+	
+</beans>
